@@ -3,22 +3,27 @@ import React, { useState } from 'react';
 const ChatInput = ({ addMessage }) => {
   const [input, setInput] = useState('');
 
+  // will trigger when user submit
   const handleSubmit = (e) => {
     e.preventDefault();
     if (input.trim()) {
-      addMessage(input);
-      setInput('');
+      addMessage(input); // call addMessage method
+      setInput(''); // empty the input
     }
   };
 
   return (
+    // taking user input
     <form className="chatinput" onSubmit={handleSubmit}>
+      
       <textarea
         value={input}
         onChange={(e) => setInput(e.target.value)}
-        placeholder="Type a message..."
+        placeholder="Write your detailed query here..."
       />
+      
       <button type="submit">Send</button>
+    
     </form>
   );
 };

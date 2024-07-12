@@ -65,6 +65,37 @@
   text-align: left;
 }
 
+
+
+.message {
+  padding: 0.5rem;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+  word-wrap: break-word;
+  display: inline-block;
+}
+
+.user-message {
+  max-width: 50%; /* Maximum width for user messages */
+  background-color: #dcf8c6;
+  text-align: right;
+  margin-left: auto;
+  word-wrap: break-word; /* Ensures long words break */
+  white-space: pre-wrap; /* Preserves whitespace and breaks lines */
+}
+
+.bot-message {
+  max-width: 70%; /* Maximum width for bot messages */
+  background-color: #f1f0f0;
+  text-align: left;
+  margin-right: auto;
+  word-wrap: break-word; /* Ensures long words break */
+  white-space: pre-wrap; /* Preserves whitespace and breaks lines */
+}
+
+
+
 .chatinput {
   display: flex;
   padding: 0.5rem;
