@@ -1,26 +1,13 @@
-import './App.css';
-
 import React from 'react';
-import Header from './components/Header';
-import SearchBar from './components/SearchBar';
-import ContentSection from './components/ContentSection';
-import Footer from './components/Footer';
-import { Container, ThemeProvider, CssBaseline } from '@mui/material';
-import theme from './theme';
+import Sidebar from './components/Sidebar';
+import ChatBox from './components/ChatBox';
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <div>
-        <Header />
-        <Container>
-          <SearchBar />
-          <ContentSection />
-        </Container>
-        <Footer />
-      </div>
-    </ThemeProvider>
+    <div className="app">
+      <Sidebar />
+      <ChatBox />
+    </div>
   );
 }
 
