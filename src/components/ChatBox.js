@@ -17,9 +17,20 @@ const ChatBox = () => {
     // Wait for the response and add the response in messages array
     // if more than one response is coming then use loop to add 
 
-    setTimeout(() => {
-      setMessages((prevMessages) => [...prevMessages, { sender: 'bot', text: bot_response }]);
-    }, 1000);
+    // setTimeout(() => {
+    //   setMessages((prevMessages) => [...prevMessages, { sender: 'bot', text: bot_response }]);
+    // }, 1000);
+
+    fetch('https://catfact.ninja/fact')
+      .then(response => response.json())
+      .then(data => {
+        setMessages((prevMessages) => [...prevMessages, { sender: 'bot', text: data.fact }]);
+      })
+      .catch(error => {
+        console.error('Error fetching the cat fact:', error);
+        setMessages((prevMessages) => [...prevMessages, { sender: 'bot', text: 'Sorry, something went wrong!' }]);
+      });
+
   };
 
   return (

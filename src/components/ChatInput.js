@@ -22,7 +22,7 @@ const ChatInput = ({ addMessage }) => {
         placeholder="Write your detailed query here..."
       />
       
-      <button type="submit">Send</button>
+      <button type="submit">AI</button>
     
     </form>
   );
