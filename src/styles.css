@@ -17,6 +17,7 @@
   border-right: 1px solid #ddd;
   overflow-y: auto;
   height: 100vh; /* Ensure sidebar takes full height of the viewport */
+  display: none;
 }
 
 .sidebar h2 {
