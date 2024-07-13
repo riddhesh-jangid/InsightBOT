@@ -38,8 +38,10 @@ const ChatList = ({ messages }) => {
             justifyContent: msg.sender === 'user' ? 'flex-end' : 'flex-start',
             marginBottom: '0.5rem',
           }}
+          id='padding-between-chat'
         >
           <Box
+            class="chat-message-container"
             sx={{
               padding: '0.5rem',
               borderBottom: '1px solid #eee',
@@ -52,7 +54,7 @@ const ChatList = ({ messages }) => {
               whiteSpace: 'pre-wrap', // Preserves whitespace and breaks lines
             }}
           >
-            <Typography variant="body1">{msg.text}</Typography>
+            <Typography class='chat-message' variant="body1">{msg.text}</Typography>
           </Box>
         </Box>
       ))}

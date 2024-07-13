@@ -14,17 +14,19 @@ const ChatInput = ({ addMessage }) => {
 
   return (
     // taking user input
-    <form className="chatinput" onSubmit={handleSubmit}>
+    <dev class='input-container'>
+      <form className="chatinput" onSubmit={handleSubmit}>
+        
+        <textarea
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          placeholder="Write your detailed query here..."
+        />
+        
+        <button type="submit">AI</button>
       
-      <textarea
-        value={input}
-        onChange={(e) => setInput(e.target.value)}
-        placeholder="Write your detailed query here..."
-      />
-      
-      <button type="submit">AI</button>
-    
-    </form>
+      </form>
+    </dev>
   );
 };
 

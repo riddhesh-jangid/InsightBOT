@@ -3,12 +3,59 @@
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
+  background-color: black;
+  color: #F8F7F9;
+}
+
+.outer-app{
+
+}
+
+.header-container{
+  height: 7vh;
+  width: 100vw !important;
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  align-items: center;
+}
+
+.header {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  padding: 0 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+.logo {
+  height: 60px; /* Adjust the size as needed */
+  margin-right: 10px;
+}
+
+.organization-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  margin: 0;
+}
+
+.header img{
+  background-color: transparent !important;
+}
+
+.header h1 {
+  background-color: transparent;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .app {
   display: flex;
-  height: 100vh;
+  height: 93vh;
 }
+
 
 .sidebar {
   width: 20%;
@@ -95,20 +142,42 @@
   white-space: pre-wrap; /* Preserves whitespace and breaks lines */
 }
 
+.chat-message-container{
+  max-width: 60%; 
+  /* height: 6vh; */
+  display: flex;
+  align-items: center;
+  background-color: #333333;
+  border-radius: 20px;
+  padding-left: 20px; /* Adjust the padding as needed */
+  padding-right: 20px; /* Adjust the padding as needed */  
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 
+.chat-message{
+  background-color: transparent !important;
+  pad: 5px !important
+}
+
+.MuiBox-root {
+  border: none !important;
+}
 
 .chatinput {
   display: flex;
   padding: 0.5rem;
-  background: #f4f4f4;
+  border: none !important;
+  /* background: #f4f4f4; */
 }
 
 .chatinput textarea {
   flex: 1;
   resize: none;
   padding: 0.5rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  /* border: 1px solid #ddd; */
+  border-radius: 10px;
+  background-color: #333333;
 }
 
 .chatinput button {
@@ -116,6 +185,7 @@
   margin-left: 0.5rem;
   border: none;
   background: #007bff;
+  background: #0E9594;
   color: white;
   border-radius: 4px;
   cursor: pointer;
@@ -123,6 +193,30 @@
 
 .chatinput button:hover {
   background: #0056b3;
+  background: #333333;
+}
+
+.input-container{
+  display: flex;
+  justify-content: center;
+}
+
+.chatinput{
+  width: 90%;
+}
+
+textarea{
+  display: flex;
+  align-items: center;
+}
+
+textarea::placeholder {
+  font-size: medium;
+}
+
+#padding-between-chat{
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
 }
 
 @media (max-width: 768px) {
