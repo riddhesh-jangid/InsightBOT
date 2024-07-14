@@ -27,10 +27,11 @@ const ChatBox = () => {
     // }, 1000);
 
     const apiKey = "gLSFji9inDPPZo2ZvKmpKzeNy8AXGIT7";
-    const requestBody = {'user_query':""}; 
-
+    const requestBody = {user_query:'What is the last year trends'}; 
+    
     fetch('https://hackfest-cb-end-2.westus.inference.ml.azure.com/score', {
       method: 'POST',
+      mode: 'no-cors',
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${apiKey}`
@@ -42,7 +43,7 @@ const ChatBox = () => {
         setMessages((prevMessages) => [...prevMessages, { sender: 'bot', text: data.summary }]);
       })
       .catch(error => {
-        console.error('Error fetching the cat fact:', error);
+        console.error('Error fetching the question:', error);
         setMessages((prevMessages) => [...prevMessages, { sender: 'bot', text: 'Sorry, something went wrong!' }]);
       });
      
