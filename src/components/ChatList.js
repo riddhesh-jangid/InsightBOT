@@ -21,6 +21,7 @@ const ChatList = ({ messages }) => {
 
   return (
     <Box
+      className='chatpage'
       ref={chatListRef}
       sx={{
         flex: 1,
