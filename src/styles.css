@@ -12,7 +12,7 @@
 }
 
 .header-container{
-  height: 7vh;
+  height: 8vh;
   width: 100vw !important;
   display: flex;
   justify-content: center;
@@ -30,8 +30,31 @@
   border: none;
 }
 
+/* .imagecenter{
+  display: flax;
+  justify-content: center; 
+}
+
+.imagecenter img{
+  height: 50px;
+  width: 50px
+} */
+
+.imagecenter {
+}
+
+.imagecenter img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  transform: translate(-50%, -50%);
+  z-index: 1;  
+}
+
 .logo {
-  height: 60px; /* Adjust the size as needed */
+  height: 30px; /* Adjust the size as needed */
   margin-right: 10px;
 }
 
@@ -53,7 +76,7 @@
 
 .app {
   display: flex;
-  height: 93vh;
+  height: 92vh;
 }
 
 
