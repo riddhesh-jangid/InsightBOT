@@ -26,15 +26,36 @@ const ChatBox = () => {
     //   setMessages((prevMessages) => [...prevMessages, { sender: 'bot', text: bot_response }]);
     // }, 1000);
 
-    fetch('https://catfact.ninja/fact')
+    const apiKey = "gLSFji9inDPPZo2ZvKmpKzeNy8AXGIT7";
+    const requestBody = {'user_query':""}; 
+
+    fetch('https://hackfest-cb-end-2.westus.inference.ml.azure.com/score', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${apiKey}`
+      },
+      body: JSON.stringify(requestBody)
+    })
       .then(response => response.json())
       .then(data => {
-        setMessages((prevMessages) => [...prevMessages, { sender: 'bot', text: data.fact }]);
+        setMessages((prevMessages) => [...prevMessages, { sender: 'bot', text: data.summary }]);
       })
       .catch(error => {
         console.error('Error fetching the cat fact:', error);
         setMessages((prevMessages) => [...prevMessages, { sender: 'bot', text: 'Sorry, something went wrong!' }]);
       });
+     
+
+    // fetch('https://catfact.ninja/fact')
+    //   .then(response => response.json())
+    //   .then(data => {
+    //     setMessages((prevMessages) => [...prevMessages, { sender: 'bot', text: data.fact }]);
+    //   })
+    //   .catch(error => {
+    //     console.error('Error fetching the cat fact:', error);
+    //     setMessages((prevMessages) => [...prevMessages, { sender: 'bot', text: 'Sorry, something went wrong!' }]);
+    //   });
 
   };
 
